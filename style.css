@@ -71,7 +71,7 @@ a {
 
 .hero-section {
     height: 100vh;
-    background-image: url('https://via.placeholder.com/1920x1080/000000/333333?text=Hero+Image+McLaren');
+    background-image: url('https://cdn.sanity.io/images/v4i92q6x/production/0da6b4e54ca70afe8d90263a61bee86c92970998-2160x1440.jpg?w=2048&h=1366&q=100&auto=format');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -243,4 +243,5 @@ footer {
     .model-row { flex-direction: column; }
     .model-image { height: 300px; }
     .model-info { padding: 40px 20px; }
+
 }
