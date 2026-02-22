@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt | McLaren Warszawa</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="logo"><a href="index.html" style="color:white;">McLAREN <span class="orange-dot">.</span></a></div>
-        <ul class="nav-links">
-    <li><a href="supercars.html">Supercars</a></li>
-    <li><a href="gt.html">GT</a></li>
-    <li><a href="ultimate.html">Ultimate</a></li>
-    <li><a href="contact.html" class="contact-btn">Kontakt</a></li>
-</ul>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="supercars.html" class="nav-item">Supercars</a></li>
+            <li><a href="gt.html" class="nav-item">GT</a></li>
+            <li><a href="ultimate.html" class="nav-item">Ultimate</a></li>
+            <li><a href="contact.html" class="contact-btn">Kontakt</a></li>
+        </ul>
     </nav>
 
-    <header class="page-header">
+    <header class="page-header contact-header">
         <div class="hero-content">
             <span class="subtitle">Jesteśmy do dyspozycji</span>
             <h1>Skontaktuj się</h1>
@@ -30,11 +31,12 @@
 
     <section class="contact-section">
         <div class="contact-container">
-            
+
             <div class="contact-info">
                 <h2>McLaren Warszawa</h2>
-                <p class="desc">Oficjalny dealer. Odwiedź nasz salon, aby doświadczyć wydajności bez kompromisów lub umów się na jazdę testową.</p>
-                
+                <p class="desc">Oficjalny dealer. Odwiedź nasz salon, aby doświadczyć wydajności bez kompromisów lub
+                    umów się na jazdę testową z naszym ekspertem.</p>
+
                 <div class="info-item">
                     <h3>Adres</h3>
                     <p>ul. Ostrobramska 123<br>04-175 Warszawa, Polska</p>
@@ -42,48 +44,53 @@
 
                 <div class="info-item">
                     <h3>Kontakt bezpośredni</h3>
-                    <p>Tel: +48 22 123 45 67</p>
-                    <p>Email: salon@mclaren-warszawa.pl</p>
+                    <p>Tel: <a href="tel:+48221234567" style="color: #ddd;">+48 22 123 45 67</a></p>
+                    <p>Email: <a href="mailto:salon@mclaren-warszawa.pl"
+                            style="color: #ddd;">salon@mclaren-warszawa.pl</a></p>
                 </div>
 
                 <div class="info-item">
                     <h3>Godziny otwarcia</h3>
-                    <p>Pon - Pt: 09:00 - 18:00</p>
+                    <p>Poniedziałek - Piątek: 09:00 - 18:00</p>
                     <p>Sobota: 10:00 - 15:00</p>
+                    <p>Niedziela: Zamknięte</p>
                 </div>
             </div>
 
             <div class="contact-form-wrapper">
-                <form class="contact-form">
+                <form class="contact-form" action="#" method="POST">
                     <div class="form-group">
                         <label for="name">Imię i Nazwisko</label>
-                        <input type="text" id="name" placeholder="Wpisz swoje imię">
+                        <input type="text" id="name" name="name" placeholder="Wpisz swoje imię" required
+                            autocomplete="name">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Adres E-mail</label>
-                        <input type="email" id="email" placeholder="twoj@email.com">
+                        <input type="email" id="email" name="email" placeholder="twoj@email.com" required
+                            autocomplete="email">
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Telefon</label>
-                        <input type="tel" id="phone" placeholder="+48 ...">
+                        <input type="tel" id="phone" name="phone" placeholder="+48 ..." required autocomplete="tel">
                     </div>
 
                     <div class="form-group">
                         <label for="model">Zainteresowanie modelem</label>
-                        <select id="model">
-                            <option value="">Wybierz model...</option>
+                        <select id="model" name="model" required>
+                            <option value="" disabled selected>Wybierz model...</option>
                             <option value="750s">McLaren 750S</option>
                             <option value="artura">McLaren Artura</option>
                             <option value="gts">McLaren GTS</option>
-                            <option value="other">Inny / Serwis</option>
+                            <option value="other">Inny / Umów Serwis</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Wiadomość</label>
-                        <textarea id="message" rows="5" placeholder="Jak możemy Ci pomóc?"></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Jak możemy Ci pomóc?"
+                            required></textarea>
                     </div>
 
                     <button type="submit" class="btn-main full-width">Wyślij wiadomość</button>
@@ -93,6 +100,14 @@
         </div>
     </section>
 
+    <section class="map-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438505505!2d20.92111263539824!3d52.23306532087532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-col">
@@ -100,10 +115,11 @@
                 <p>ul. Ostrobramska 123<br>Warszawa, Polska</p>
             </div>
             <div class="footer-col">
-                <p>&copy; 2024 McLaren Automotive Limited.</p>
+                <p>&copy; 2026 McLaren Automotive Limited. Wszelkie prawa zastrzeżone.</p>
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>
