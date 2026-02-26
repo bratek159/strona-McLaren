@@ -18,25 +18,27 @@ a {
 }
 
 .navbar {
-    background: rgba(11, 11, 11, 0.75);
+    background: rgba(10, 10, 10, 0.4);
     position: fixed;
     width: 100%;
     left: 0;
     top: 0;
     padding: 20px 50px;
-    backdrop-filter: blur(10px);
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
     letter-spacing: 2px;
     font-size: 24px;
     font-weight: 700;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
 .logo a {
@@ -45,6 +47,7 @@ a {
 
 .orange-dot {
     color: #FF8000;
+    text-shadow: 0 0 15px #FF8000;
 }
 
 .nav-links {
@@ -61,13 +64,15 @@ a {
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 1px;
-    opacity: 0.8;
+    opacity: 0.7;
     text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #FF8000;
     opacity: 1;
+    text-shadow: 0 0 8px rgba(255, 128, 0, 0.5);
 }
 
 .nav-item {
@@ -94,20 +99,20 @@ a {
     width: 100%;
 }
 
-.nav-item:hover {
-    color: #ffffff;
-    opacity: 1;
-}
-
 .contact-btn {
     padding: 10px 25px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
-    color: white;
-    background-color: #FF8000;
+    background: rgba(255, 128, 0, 0.2);
     border-color: #FF8000;
+    box-shadow: 0 0 15px rgba(255, 128, 0, 0.4);
+    color: white;
 }
 
 .hero-section {
@@ -236,7 +241,7 @@ a {
 
 .mso-section {
     background-position: center;
-    background-image: url('https://via.placeholder.com/1920x800/222222/000000?text=MSO+Customization');
+    background-image: url('');
     height: 70vh;
     display: flex;
     background-size: cover;
@@ -268,7 +273,7 @@ a {
     position: relative;
     padding-left: 50px;
     margin-top: 0;
-    background-image: url('https://via.placeholder.com/1920x600/111111/444444?text=McLaren+Showroom+Interior');
+    background-image: url('');
 }
 
 .page-header::before {
